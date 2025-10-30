@@ -1,18 +1,18 @@
 float x,y,z,temp;
 void setup()
 {
-  pinMode(8, INPUT);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
-  pinMode(A5, INPUT); 
-  pinMode(A4, INPUT);
+  pinMode(8, INPUT); //pir
+  pinMode(5, OUTPUT); //R1
+  pinMode(6, OUTPUT); //R2
+  pinMode(A5, INPUT); //photoresister
+  pinMode(A4, INPUT); //temp36
 Serial.begin(9600);
 }
 void loop()
 {
-  x= digitalRead(8);
-  y= analogRead(A5);
-  z= analogRead(A4);
+  x= digitalRead(8); //pir
+  y= analogRead(A5); //photoresister
+  z= analogRead(A4); //temp 36
   Serial.println(x);
   Serial.println(y);
   Serial.println(z);
